@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title> Tip Calculator App </title>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <main>
+
+        <div class="logo">
+            <img src="images/logo.svg" alt="logo">
+        </div>
+
+        <div class="container">
+            <div class="input">
+
+                <form action="">
+                    <label for="bill" class="label"> Bill</label><br>
+                    <input type="text" id="bill" class="bill_input" value="0" >
+                </form>
+
+
+
+                <section>
+                    <p class="label"> Select Tip %</p>
+                    <div class="tip-buttons">
+                        <button class="tip-button">5%</button>
+                        <button class="tip-button">10%</button>
+                        <button class="tip-button">15%</button>
+                        <button class="tip-button">25%</button>
+                        <button class="tip-button">50%</button>
+                        <input type="text" id="custom" class="custom" value="Custom">
+                    </div>
+
+                </section>
+
+                <form action="">
+                    <label for="numOfPeople_input" class="label"> Number of People </label><br>
+                    <input type="text" id="numOfPeople_input" class="numOfPeople_input" value="0">
+                </form>
+            </div>
+
+
+            <div class="display">
+                <div class="Tip-row">
+                    <div class="classification">
+                        <p class="category">Tip Amount</p>
+                        <p class="per-person">/ person</p>
+                    </div>
+                    <p class="tipAmount"> $0.00</p>
+                </div>
+
+                <div class="Total-row">
+                    <div class="classification">
+                        <p class="category">Total</p>
+                        <p class="per-person">/ person</p>
+                    </div>
+                    <p class="totalAmount"> $0.00</p>
+                </div>
+
+                <div class="reset-btn">
+                    <button class="reset" disabled>RESET</button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

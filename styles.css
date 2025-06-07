@@ -1,0 +1,219 @@
+/*clear margins and padding for all*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* document colors*/
+:root {
+    --Green900: hsl(183, 100%, 15%);
+    --Green900_50: hsl(183, 100%, 15%, 50%);
+    --Green400: hsl(172, 67%, 45%);
+    --Grey500: hsl(186, 14%, 43%);
+    --Grey400: hsl(184, 14%, 56%);
+    --Grey200: hsl(185, 41%, 84%);
+    --Grey50: hsl(189, 47%, 97%);
+    --white: hsl(0, 100%, 100%);
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Space Mono', sans-serif;
+    background-color: var(--Grey200);
+    font-size: 1.6rem;
+    font-weight: 700;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10rem;
+}
+
+.container {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+    background: var(--white);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 2rem;
+    margin: 5rem auto 0 auto;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: stretch;
+        width: 100%;
+        border-radius: 3rem 3rem 0 0;
+    }
+}
+
+.input {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* align-content: space-between; */
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: auto;
+    background: var(--Green900);
+    width: auto;
+    height: auto;
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+.tipAmount {
+    border: none;
+    background-color: transparent;
+}
+
+
+input {
+    font-family: 'Space Mono', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    border-radius: .5rem;
+    background-color: var(--Grey50);
+    border: solid 0.15rem transparent;
+    justify-items: end;
+    color: var(--Grey400);
+    padding: 0.5rem 1rem 0.5rem 1rem ;
+    flex-shrink: 1;
+}
+
+input:hover{
+    border: solid 0.15rem var(--Green400);
+}
+
+input:focus{
+    border: solid 0.2rem var(--Green400);
+}
+
+.label {
+    color: var(--Grey500);
+}
+
+.tip-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+button {
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    width: 10rem;
+    height: 4rem;
+    background: var(--Green900);
+    color: var(--white);
+    border-radius: 0.5rem;
+    border: none;
+}
+.tip-buttons button:hover{
+    background-color: var(--Green400);
+    color: var(--Green900);
+}
+
+
+/* @media (max-width: 700px) {
+    .tip-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} */
+
+.bill_input {
+    background-image: url('./images/icon-dollar.svg');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+.numOfPeople_input {
+    background-image: url('./images/icon-person.svg');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+.Total-row,
+.Tip-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.totalAmount,
+.tipAmount {
+    font-size: 4.8rem;
+    color: var(--Green400);
+}
+
+.category {
+    color: var(--Grey50);
+}
+
+.per-person {
+    color: var(--Grey500);
+    font-size: 1.2rem;
+}
+
+.reset-btn {
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.reset:disabled{
+    color: var(--Green900_50);
+    background: hsl(183, 79%, 24%); /* used color picker to get this one*/
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.reset:enabled{
+    color: var(--Green900);
+    background: var(--Green400);
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.reset:enabled:hover{
+    color: var(--Green900);
+    background-color: hsl(173, 61%, 77%); /* used color picker to get this one*/
+}
+
+
+.custom {
+    background: var(--Grey50);
+    color: var(--Grey500);
+    font-weight: 700;
+    width: 10rem;
+    height: 4rem;
+    justify-items: center;
+    padding: 0;
+}
+
+
