@@ -95,6 +95,7 @@ input:hover{
 
 input:focus{
     border: solid 0.2rem var(--Green400);
+    outline: none;
 }
 
 .label {
