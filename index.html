@@ -24,7 +24,8 @@
 
                 <form action="">
                     <label for="bill" class="label"> Bill</label><br>
-                    <input type="text" id="bill" class="bill_input" value="0" >
+                    <!-- not proud about this!!! -->
+                    <input type="text" id="bill" class="bill_input" value="" placeholder="                   0">
                 </form>
 
 
@@ -37,14 +38,17 @@
                         <button class="tip-button">15%</button>
                         <button class="tip-button">25%</button>
                         <button class="tip-button">50%</button>
-                        <input type="text" id="custom" class="custom" value="Custom">
+                        <input type="text" id="custom" class="custom" value="0" placeholder="Custom">
                     </div>
 
                 </section>
 
                 <form action="">
-                    <label for="numOfPeople_input" class="label"> Number of People </label><br>
-                    <input type="text" id="numOfPeople_input" class="numOfPeople_input" value="0">
+                    <div class="label-container">
+                        <label for="numOfPeople_input" class="label"> Number of People </label>
+                        <label for="numOfPeople_input" class="label no-error-text"> Can't be zero! </label>
+                    </div>
+                    <input type="text" id="numOfPeople_input" class="numOfPeople_input" value="" placeholder="                   1">
                 </form>
             </div>
 

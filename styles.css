@@ -82,25 +82,51 @@ input {
     font-weight: 700;
     border-radius: .5rem;
     background-color: var(--Grey50);
-    border: solid 0.15rem transparent;
+    border: solid 0.2rem transparent;
     justify-items: end;
     color: var(--Grey400);
-    padding: 0.5rem 1rem 0.5rem 1rem ;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     flex-shrink: 1;
 }
 
-input:hover{
-    border: solid 0.15rem var(--Green400);
+input:hover {
+    border: solid 0.2rem var(--Green400);
+    transition: all 0.2s ease;
 }
 
-input:focus{
+input:focus {
     border: solid 0.2rem var(--Green400);
     outline: none;
+    transition: all 0.2s ease;
 }
 
 .label {
     color: var(--Grey500);
+    margin-bottom: 0.5rem;
 }
+
+.label-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.no-error-text {
+    display: none;
+}
+
+.error-text {
+    display: flex;
+    color: salmon;
+}
+
+.numOfPeople_input.error-input-boader,
+.numOfPeople_input.error-input-boader:hover,
+.numOfPeople_input.error-input-boader:focus {
+    border: solid 0.2rem salmon !important;
+    outline: none;
+}
+
 
 .tip-buttons {
     display: grid;
@@ -120,7 +146,13 @@ button {
     border-radius: 0.5rem;
     border: none;
 }
-.tip-buttons button:hover{
+
+.tip-buttons button:hover {
+    background-color: var(--Green400);
+    color: var(--Green900);
+}
+
+.tip-buttons .active {
     background-color: var(--Green400);
     color: var(--Green900);
 }
@@ -130,14 +162,28 @@ button {
     background-image: url('./images/icon-dollar.svg');
     background-position: 10px center;
     background-repeat: no-repeat;
-    padding-left: 30px;
+    padding-left: 3rem;
+    text-align: right;
+}
+
+.bill_input::placeholder {
+    text-align: right;
+    color: var(--Grey400);
+    ;
 }
 
 .numOfPeople_input {
     background-image: url('./images/icon-person.svg');
     background-position: 10px center;
     background-repeat: no-repeat;
-    padding-left: 30px;
+    padding-left: 3rem;
+    text-align: right;
+}
+
+.numOfPeople_input::placeholder {
+    text-align: right;
+    color: var(--Grey400);
+    ;
 }
 
 .Total-row,
@@ -168,15 +214,16 @@ button {
     width: 100%;
 }
 
-.reset:disabled{
+.reset:disabled {
     color: var(--Green900_50);
-    background: hsl(183, 79%, 24%); /* used color picker to get this one*/
+    background: hsl(183, 79%, 24%);
+    /* used color picker to get this one*/
     width: 100%;
     font-size: 1.8rem;
     font-weight: 700;
 }
 
-.reset:enabled{
+.reset:enabled {
     color: var(--Green900);
     background: var(--Green400);
     width: 100%;
@@ -184,9 +231,10 @@ button {
     font-weight: 700;
 }
 
-.reset:enabled:hover{
+.reset:enabled:hover {
     color: var(--Green900);
-    background-color: hsl(173, 61%, 77%); /* used color picker to get this one*/
+    background-color: hsl(173, 61%, 77%);
+    /* used color picker to get this one*/
 }
 
 
@@ -199,19 +247,26 @@ button {
     justify-items: center;
     padding: 0;
 }
+.custom::placeholder {
+    color: var(--Grey400);
+    text-align: center;
+}
 
 /* media queries */
 
 @media (max-width: 700px) {
 
-    *, *::before, *::after {
-    box-sizing: border-box;
-}
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
 
     .container {
         flex-direction: column;
         align-items: center;
-        justify-items: center;;
+        justify-items: center;
+        ;
         justify-content: stretch;
         width: 100%;
         border-radius: 3rem 3rem 0 0;
@@ -226,16 +281,17 @@ button {
         gap: 2rem;
     }
 
-    .tip-buttons button, .custom{
+    .tip-buttons button,
+    .custom {
         width: 100%;
     }
 
-    input{
+    input {
         width: 100%;
 
     }
 
-    .display{
+    .display {
         width: 100%;
     }
 }
